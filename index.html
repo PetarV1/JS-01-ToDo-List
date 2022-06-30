@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS-01</title>
+</head>
+<body>
+  <section>   
+    <header>    
+      <h2>To-Do &nbsp List</h2>
+      <div class="wrapper">
+        <input type="text" id="myInput">
+        <button onclick="dodaj()" class="addBtn">&#10009</button>
+      </div>
+    </header>
+    <ul id="myUL">
+      <li onclick="odradjeno(this)">Hit the gym <div onclick="obrisi(this)" class="obrisi">&#10008;</div></li>
+      <li onclick="odradjeno(this)">Pay bills <div onclick="obrisi(this)" class="obrisi">&#10008;</div></li>
+      <li onclick="odradjeno(this)">Meet George <div onclick="obrisi(this)" class="obrisi">&#10008;</div></li>
+      <li onclick="odradjeno(this)">Buy eggs <div onclick="obrisi(this)" class="obrisi">&#10008;</div></li>
+    </ul>
+  </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

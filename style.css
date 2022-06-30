@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --plava: #00adff;
+    --bijela: rgb(240,241,243);
+    --tamnosiva: #668292;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--bijela);
+    display: grid;
+    place-items: center;
+}
+
+/* Naslov i unos */
+
+header {
+    padding: 10px;
+    width: 30vw;
+    height: 200px;
+    background-color: var(--plava);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+header h2 {
+    color: var(--bijela);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    display: flex;
+    width: 60%;
+}
+
+#myInput {
+    height: 50px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.addBtn {
+    height: 50px;
+    aspect-ratio: 1;
+    border: 0;
+    font-size: 1rem;
+    outline: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--tamnosiva);
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--bijela);
+    margin-left: -30px;
+    transition: all 0.5s;
+}
+
+.addBtn:hover {
+    transform: rotate(90deg);
+}
+
+/* Lista */
+
+#myUL {
+    width: 30vw;
+    list-style: none;
+    background-color: var(--plava);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    box-shadow: #667292 0px 6px 0px 0px; 
+    border-radius: 12px;
+}
+
+li {
+    padding: 10px 10px;
+    padding-left: 30px;
+    font-family: sans-serif;
+    position: relative;
+    background-color: var(--bijela);
+    box-shadow: #667292 0px 6px 0px 0px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+li:hover {
+    background-color: rgb(186, 190, 199);
+}
+
+.li-odradjeno:hover {
+    background-color: var(--tamnosiva)
+}
+
+.li-odradjeno {
+    text-decoration: line-through;
+    background-color: var(--tamnosiva);
+    position: relative;
+    color: var(--bijela);
+}
+
+.li-odradjeno::before {
+    content: "\2714";
+    position: absolute;
+    left: 10px;
+    top: 8px;
+}
+
+.obrisi {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    padding-left: 10px !important;
+    padding: inherit;
+    font-weight: 700;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: crimson;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.5s;
+}
+
+.obrisi:hover {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    padding: inherit;
+    font-weight: 700;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    background-color: crimson;
+    color: var(--bijela);
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.5s;
+}
